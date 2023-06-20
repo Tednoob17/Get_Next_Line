@@ -33,8 +33,13 @@ int	*jump_next_line(int fd);
 |  malloc() | EOF has been reached |
 |  free() | An error happened |
 
-```bash
-gcc tests/main.c -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
 
-./a.out tests/files/part1_test01_with_lines
+## Compilation 💽
+
+**JNL Mandatory Part**
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89    src/get_next_line.c include/get_next_line.h src/main.c src/get_next_line_utils.c 
 ```
+
+
