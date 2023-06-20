@@ -1,14 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nikito                                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 07:57:36 by nikito            #+#    #+#             */
-/*   Updated: 2022/03/16 07:58:22 by mjallada         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/**
+*
+*
+*
+*/
 
 #include "../include/get_next_line.h"
 
@@ -20,13 +14,10 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, &line, 0) < 0)
 		return (NULL);
 	line = NULL;
-	// 1. read from fd and add to linked list
 	read_and_stash(fd, &stash);
 	if (stash == NULL)
 		return (NULL);
-	// 2. extract from stash to line
 	extract_line(stash, &line);
-	// 3. clean up stash
 	clean_stash(&stash);
 	if (line[0] == '\0')
 	{
