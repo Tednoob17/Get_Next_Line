@@ -1433,5 +1433,83 @@ Cake is now served.
 (null)%                                                                                                                                                                  ➜ j3kyll@42  ~/SCOP/Jump_Next_Line git:(main) ✗ 
 
 ```
+## Points to understand in JNL
+
+According to the JNL subject *Calling your function jump_next_line in a loop will then allow you to read the text
+available on a file descriptor one line at a time until the EOF*
+
+Call JNL from the main
+
+```c
+
+#include "../include/get_next_line.h"
+#include <fcntl.h>
+
+int	main(int argc, char **argv)
+{
+	int		fd;
+	char	*line;
+
+	fd = open(argv[1], O_RDONLY);
+	while (1)
+	{
+		line = get_next_line(fd);
+		printf("%s", line);
+		if (line == NULL)
+			break ;
+		free(line);
+	}
+    if (argc == 0){
+        return (0);
+    }
+	return (0);
+}
+
+
+```
+This next line will return an integer that will be used as a parameter for the **jump_next_line** function.
+```c
+fd = open(argv[1], O_RDONLY);
+```
+**jump_next_line** function will return an **integer** that will be taken to evaluate all the lines until the file ends.
+
+### Return value
+ | Value | Description         |
+ |-----------|----------------------|
+ |  1| A line has been read |
+ |  0| EOF has been reached |
+ |  -1| An error happened |
+
+
+### VALGRIND
+**What it is ?**
+The Valgrind tool suite provides a number of debugging and profiling tools that help you make your programs faster and more correct. The most popular of these tools is called Memcheck. It can detect many memory-related errors that are common in C and C++ programs and that can lead to crashes and unpredictable behaviour.
+
+**Installation**
+```bash
+sudo apt-get update -y
+sudo apt-get install -y valgrind
+```
+**How to Use?**
+```bash
+gcc tests/main.c -g -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
+
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./a.out tests/files/part1_test01_with_lines
+```
+
+
+**:information_source:** [ know more about valgrind ](https://valgrind.org/docs/manual/quick-start.html)
+
+
+### Betty 
+```bash
+        betty */* 
+```
+
+
+
+
+
+
 
 
