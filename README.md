@@ -1,3 +1,4 @@
+## Intro
 
  <img src="./imgs/jumps.jpg" width="1000" />
 
@@ -10,10 +11,14 @@ The objectif of this project is to make you code a function that
 This project will not only allow  to add a very convenient function to 
 our collection,but it will also allow  to learn a highly interest contest to Alx program (If you want)
 
-### Function 🐧
-```c
-int	*get_next_line(int fd);
+### How to use it 
+
+```bash
+    git clone https://github.com/Tednoob17/Get_Next_Line
+
 ```
+**you there are several test files**
+
 
 
 ### Return value
@@ -1433,6 +1438,13 @@ Cake is now served.
 (null)%                                                                                                                                                                  ➜ j3kyll@42  ~/SCOP/Jump_Next_Line git:(main) ✗ 
 
 ```
+
+### Function 🐧
+```c
+int	*get_next_line(int fd);
+```
+
+
 ## Points to understand in JNL
 
 According to the JNL subject *Calling your function jump_next_line in a loop will then allow you to read the text
@@ -1467,7 +1479,10 @@ int	main(int argc, char **argv)
 
 
 ```
+
 This next line will return an integer that will be used as a parameter for the **get_next_line** function.
+
+
 ```c
 fd = open(argv[1], O_RDONLY);
 ```
@@ -1502,13 +1517,16 @@ valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 
 
 
 ### Betty 
+
 ```bash
-        betty */* 
+        betty src/*.c  
 ```
 
+    **And** 
 
-
-
+```bash
+        betty src/*.h  
+```
 
 
 
