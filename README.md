@@ -1,5 +1,5 @@
 
- <img src="./imgs/jumps.jpg" width="855" />
+ <img src="./imgs/jumps.jpg" width="1000" />
 
 ##  Jump_Next_Line 
 ###	Because read a line on a  fd sucks
