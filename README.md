@@ -1,7 +1,7 @@
 
  <img src="./imgs/jumps.jpg" width="1000" />
 
-##  Jump_Next_Line 
+##  Get_Next_Line 
 ###	Because read a line on a  fd sucks
 
 
@@ -12,7 +12,7 @@ our collection,but it will also allow  to learn a highly interest contest to Alx
 
 ### Function 🐧
 ```c
-int	*jump_next_line(int fd);
+int	*get_next_line(int fd);
 ```
 
 
@@ -49,7 +49,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89    src/get_next_line.c include/ge
 
 **Output**
 ```bash
-➜ j3kyll@42  ~/SCOP/Jump_Next_Line git:(main) ✗ ./uuu tests/xextra_test_file.txt
+➜ j3kyll@42  ~/SCOP/Get_Next_Line git:(main) ✗ ./uuu tests/xextra_test_file.txt
 [MUSIC PLAYING]
 
 DAVID MALAN: This is CS50, Harvard University's introduction
@@ -1467,11 +1467,11 @@ int	main(int argc, char **argv)
 
 
 ```
-This next line will return an integer that will be used as a parameter for the **jump_next_line** function.
+This next line will return an integer that will be used as a parameter for the **get_next_line** function.
 ```c
 fd = open(argv[1], O_RDONLY);
 ```
-**jump_next_line** function will return an **integer** that will be taken to evaluate all the lines until the file ends.
+**get_next_line** function will return an **integer** that will be taken to evaluate all the lines until the file ends.
 
 ### Return value
  | Value | Description         |
