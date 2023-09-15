@@ -16,8 +16,8 @@ int	main(int argc, char **argv)
 			break ;
 		free(line);
 	}
-    if (argc == 0){
-        return (0);
-    }
+        if (argc == 0){
+        	return (0);
+        }
 	return (0);
 }
